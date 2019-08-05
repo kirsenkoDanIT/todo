@@ -1,0 +1,9 @@
+body{
+    background: rgba(255, 255, 0, 0.2);
+}
+.todoDeleteBtn{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image:url(/img/close.png);
+}

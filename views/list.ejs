@@ -1,0 +1,8 @@
+<button type="button" class="btn  todoDeleteBtn p-2 ml-auto d-block" data-id="<%=todo._id%>" style="align-self: flex-end; "></button>
+<ol class="">
+    <%todo.text.forEach((item, index)=>{%>
+    <li class="" style="padding: 0 20px"><input type="checkbox" class="form-check-input" id="<%=index%>"><label
+            for="<%=index%>"><%=item%></label></li>
+    <%})%>
+</ol>
+<button type="button" class="btn btn-warning todoEditBtn" data-id="<%=todo._id%>">Edit</button>

@@ -1,0 +1,26 @@
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); 
+grid-gap: 10px;
+align-content: flex-start;
+">
+    <%lists.forEach(item=>{%>
+    <article class="rounded p-2 border border-dark bg-light"
+        style=" height: 180px; display: flex; flex-direction: column; ">
+        <button type="button" class="btn  todoDeleteBtn p-2" data-id="<%=item._id%>"
+            style="align-self: flex-end; "></button>
+        <ol style="padding:5px 20px; margin: 0; align-self: flex-start;">
+            <%if(item.text.length>3){%>
+            <%item.text.splice(0,3).forEach(item=>{%>
+            <li><%=item%></li>
+            <%})%>
+            <li>...</li>
+            <%}else{%>
+            <%item.text.forEach(item=>{%>
+            <li><%=item%></li>
+            <%})%>
+            <%}%>
+        </ol>
+        <button  type="button" class="btn btn-success view-btn d-block mt-auto" data-id="<%=item._id%>">View</button>
+    </article>
+    <%})%>
+</div>
