@@ -4,6 +4,7 @@ const {
 } = require('mongoose')
 
 const schema = new Schema({
+    title:String,
     text: [String]
 })
 

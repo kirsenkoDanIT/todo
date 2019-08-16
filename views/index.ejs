@@ -8,6 +8,7 @@ align-content: flex-start;
         style=" height: 180px; display: flex; flex-direction: column; ">
         <button type="button" class="btn  todoDeleteBtn p-2" data-id="<%=item._id%>"
             style="align-self: flex-end; "></button>
+            <h1><%=item.title%></h1>
         <ol style="padding:5px 20px; margin: 0; align-self: flex-start;">
             <%if(item.text.length>3){%>
             <%item.text.splice(0,3).forEach(item=>{%>

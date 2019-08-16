@@ -48,8 +48,9 @@ async function createTodoList() {
             acc.push(item.value)
             return acc
         }, [])
-
+        const title = document.querySelector('[name=list-title]')
         let data = {
+            title:title.value,
             text: text
         }
         await fetch("/api/lists", {
@@ -72,7 +73,10 @@ async function editTodoList(id) {
             return acc
         }, [])
 
+        const title = document.querySelectorAll('[name=list-title]')
+
         let data = {
+            title:title.value,
             text: text
         }
         console.log(data);

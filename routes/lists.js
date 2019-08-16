@@ -11,6 +11,7 @@ router.get('/lists', (req, res) => {
 router.post('/api/lists', async (req, res) => {
     try {
         const list = await new TODO({
+            title: req.body.title,
             text: req.body.text
         })
         await list.save()
@@ -56,6 +57,7 @@ router.put("/api/lists/:id", async (req, res) => {
         const list = await TODO.findOneAndUpdate({
             _id: req.params.id,
         }, {
+            title: req.body.title,
             text: req.body.text
         })
         console.log(list);
